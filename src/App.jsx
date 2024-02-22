@@ -16,39 +16,63 @@ function App() {
         id:1,
         make:"KTM",
         model:"390 Adventure",
-        likes:20
+        likes:20,
+        img: "ktm_390_adventure.jpg"
     },
     {
         id:2,
         make:"Yamaha",
-        model:"XT660Z Tenere"
+        model:"XT660Z Tenere",
+        likes:10,
+        img: "xt_660z_tenere.jpg"
     },
     {
         id:3,
         make:"BMW",
-        model:"F650"
-    },
+        model:"F650",
+        likes:0,
+        img: "bmw_f650.jpg"
+    },    
     {
         id:4,
         make:"Mini",
-        model:"Clubman"
+        model:"Clubman",
+        likes:100,
+        img: "mini_clubman.jpg"
     },
     {
         id:5,
         make:"Mini",
-        model:"One"
+        model:"One",
+        img: "mini_one.jpg",
+        likes:22
     },
     {
         id:6,
         make:"Smart",
-        model:"ForTwo"
+        model:"ForTwo",
+        likes:12,
+        img: "smart_for2.jpg"
+    },
+    {
+        id:7,
+        make: "Boeing",
+        model: "747",
+        likes:120,
+        img: "boeing_747.jpg"
     }
 ])
 
   return (
     <>
 
-      <Vehicles title={"Bikes/Cars"} vehicles={vehicles} setVehicles={setVehicles}/>
+      {/* 
+        here we are sending in some props to the Vehicles Component
+        title - this prop is state that never changes
+        vehicles - this prop is state that is passed into the compoent as it might change inside the component (delete/add)
+        setVehicles - 
+       */}
+      <Vehicles title={"Vehicle Voting"} vehicles={vehicles} setVehicles={setVehicles}/>
     </>
   )
 }
