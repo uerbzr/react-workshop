@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Vehicle({vehicle, deleteVehicle, updateLikes }) {
-
-
+function Vehicle({vehicle, deleteVehicle, updateLikes, checkWinner }) {
+  
   const renderVehicleImage = (vehicle) => {
     return (<img src={vehicle.img} title={vehicle.make} width={220} height={140}/>)
   }
   return (
    <>   
         <div className="card col-md-4">       
-        <div className="card-body">
+        <div className="card-body">                     
+        <h1></h1>
         <h3>Votes: {vehicle.likes ? vehicle.likes : 0}</h3>
         <h5 className="card-title">{vehicle.make} {vehicle.model}</h5>    
         {vehicle.img ? renderVehicleImage(vehicle) : null} 

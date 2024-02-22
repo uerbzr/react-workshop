@@ -25,10 +25,10 @@ function Vehicles({title, vehicles, setVehicles}) {
   const updateLikes = (id,amount) => {
     let _vehicles = [...vehicles]
     let _vehicle = _vehicles.find(f => f.id==id)
-    console.log(id,amount, _vehicle)
     _vehicle.likes+=amount
     setVehicles(_vehicles)
   }
+
   return (
     <>
 
@@ -51,7 +51,7 @@ function Vehicles({title, vehicles, setVehicles}) {
 
         {
           vehicles.map((v,i)=> (
-          <Vehicle key={i} vehicle={v} deleteVehicle={deleteVehicle} updateLikes={updateLikes}/>
+          <Vehicle key={i} vehicle={v} deleteVehicle={deleteVehicle} updateLikes={updateLikes} />
           ))                                      
         }
      
